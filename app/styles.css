@@ -1,0 +1,70 @@
+/* styles.css - Custom CSS for DocuMind Streamlit UI */
+
+/* Overall App Background and Font */
+.stApp {
+    background-color: #f8f9fa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Hide standard Streamlit header */
+header[data-testid="stHeader"] {
+    display: none;
+}
+
+/* Card-like containers */
+div[data-testid="stVerticalBlock"] > div[style*="flex-direction: column;"] {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Primary Button Override */
+.stButton > button[kind="primary"] {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+}
+.stButton > button[kind="primary"]:hover {
+    background-color: #1e293b;
+}
+
+/* Chat Messages */
+[data-testid="stChatMessage"] {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Citations Styling */
+.citation-box {
+    background-color: #f1f5f9;
+    border-left: 3px solid #3b82f6;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9em;
+    color: #475569;
+}
