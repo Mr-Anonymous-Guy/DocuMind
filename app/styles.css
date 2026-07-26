@@ -3,13 +3,33 @@
 /* Overall App Background and Font */
 .stApp {
     background-color: #f8f9fa;
+    color: #0f172a;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Ensure text contrast in main app and sidebar */
+.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6, .stApp p, .stApp span, .stApp label {
+    color: #0f172a !important;
 }
 
 /* Sidebar styling */
 [data-testid="stSidebar"] {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-right: 1px solid #e5e7eb;
+}
+
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label, [data-testid="stSidebar"] div {
+    color: #0f172a !important;
+}
+
+/* Markdown Container text colors */
+[data-testid="stMarkdownContainer"] p, 
+[data-testid="stMarkdownContainer"] h1, 
+[data-testid="stMarkdownContainer"] h2, 
+[data-testid="stMarkdownContainer"] h3, 
+[data-testid="stMarkdownContainer"] li,
+[data-testid="stMarkdownContainer"] span {
+    color: #0f172a !important;
 }
 
 /* Hide standard Streamlit header */
@@ -32,30 +52,40 @@ div[data-testid="stVerticalBlock"] > div[style*="flex-direction: column;"] {
     border-radius: 6px;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
+    color: #0f172a !important;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
 }
 .stButton > button:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #f1f5f9;
 }
 
 /* Primary Button Override */
 .stButton > button[kind="primary"] {
-    background-color: #0f172a;
-    color: white;
+    background-color: #0f172a !important;
+    color: #ffffff !important;
     border: none;
 }
 .stButton > button[kind="primary"]:hover {
-    background-color: #1e293b;
+    background-color: #1e293b !important;
+    color: #ffffff !important;
 }
 
 /* Chat Messages */
 [data-testid="stChatMessage"] {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #e5e7eb;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    color: #0f172a !important;
+}
+
+[data-testid="stChatMessage"] p, [data-testid="stChatMessage"] div {
+    color: #0f172a !important;
 }
 
 /* Citations Styling */
@@ -66,5 +96,8 @@ div[data-testid="stVerticalBlock"] > div[style*="flex-direction: column;"] {
     margin-top: 10px;
     border-radius: 0 4px 4px 0;
     font-size: 0.9em;
-    color: #475569;
+    color: #334155 !important;
+}
+.citation-box b, .citation-box i {
+    color: #1e293b !important;
 }
